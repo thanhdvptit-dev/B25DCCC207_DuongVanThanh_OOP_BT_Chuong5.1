@@ -11,33 +11,51 @@ interface Salesperson {
 }
 
 class OfficeEmployee implements EmailSender {
+    private String name;
+
+    public OfficeEmployee(String name) {
+        this.name = name;
+    }
+
     @Override
     public void sendEmail(String to, String content) {
-        System.out.println("OfficeEmployee gửi email đến " + to + ": " + content);
+        System.out.println(name + " gửi email đến " + to + ": " + content);
     }
 }
 
 class TechnicalEmployee implements Programmer, EmailSender {
+    private String name;
+
+    public TechnicalEmployee(String name) {
+        this.name = name;
+    }
+
     @Override
     public void code(String language) {
-        System.out.println("TechnicalEmployee lập trình bằng " + language);
+        System.out.println(name + " lập trình bằng " + language);
     }
 
     @Override
     public void sendEmail(String to, String content) {
-        System.out.println("TechnicalEmployee gửi email đến " + to + ": " + content);
+        System.out.println(name + " gửi email đến " + to + ": " + content);
     }
 }
 
 class SalesEmployee implements Salesperson, EmailSender {
+    private String name;
+
+    public SalesEmployee(String name) {
+        this.name = name;
+    }
+
     @Override
     public void sell(String product, int quantity) {
-        System.out.println("SalesEmployee bán " + quantity + " " + product);
+        System.out.println(name + " bán " + quantity + " " + product);
     }
 
     @Override
     public void sendEmail(String to, String content) {
-        System.out.println("SalesEmployee gửi email đến " + to + ": " + content);
+        System.out.println(name + " gửi email đến " + to + ": " + content);
     }
 }
 
