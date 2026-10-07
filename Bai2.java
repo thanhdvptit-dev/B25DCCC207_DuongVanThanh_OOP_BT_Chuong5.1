@@ -1,5 +1,3 @@
-// Bai2.java
-
 interface EmailSender {
     void sendEmail(String to, String content);
 }
