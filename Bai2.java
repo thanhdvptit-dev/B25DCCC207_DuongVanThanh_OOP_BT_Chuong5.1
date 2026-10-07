@@ -43,9 +43,9 @@ class SalesEmployee implements Salesperson, EmailSender {
 
 public class Bai2 {
     public static void main(String[] args) {
-        OfficeEmployee office = new OfficeEmployee();
-        TechnicalEmployee tech = new TechnicalEmployee();
-        SalesEmployee sales = new SalesEmployee();
+        OfficeEmployee office = new OfficeEmployee("Nguyễn Văn Đà");
+        TechnicalEmployee tech = new TechnicalEmployee("Trần Diệu Linh");
+        SalesEmployee sales = new SalesEmployee("Phạm Việt Hùng");
 
         office.sendEmail("boss@company.com", "Báo cáo văn phòng");
 
